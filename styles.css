@@ -6,17 +6,17 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 
 /* Estilo para el botón "Eliminar" */
@@ -571,7 +571,7 @@ body {
     border-radius: 15px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: auto;
+    overflow: hidden;
     color: white;
     margin-top: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -872,156 +872,65 @@ footer::after {
     }
 }
 
-
-/* Estilos específicos para móviles */
+/* Media queries para pantallas de 768px */
 @media (max-width: 768px) {
-
-    .main-header h1 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-       #reservationForm {
-        padding: 15px;
-    }
-
-    input, select, button {
+    .container {
         width: 100%;
-        margin-bottom: 10px;
         padding: 10px;
-        font-size: 16px;
+    }
+    
+    .main-header h1 {
+        font-size: 2.5rem;
     }
 
-    #userReservations {
-        font-size: 14px;
+    .hero {
+        height: 70vh;
     }
 
-    /* Ajustar el tamaño de los mensajes de error y éxito */
-    #message {
-        font-size: 16px;
-        text-align: center;
+    .hero h1 {
+        font-size: 2rem;
     }
 
-    .hero-content h1 {
-        font-size: 20px;
-        text-align: center;
+    .hero h2 {
+        font-size: 1.8rem;
     }
 
-    .hero-content p {
-        font-size: 16px;
-        text-align: center;
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .features-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .feature-item {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    .reservations-list li {
+        padding: 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .reservation {
+        padding: 40px 20px;
+    }
+
+    .reservation h2 {
+        font-size: 2rem;
     }
 
     .cta-button {
-        font-size: 18px;
-        padding: 12px 24px;
-        width: 100%;
+        font-size: 1rem;
+        padding: 10px 20px;
     }
-
-    .notification p {
-        font-size: 14px;
-        text-align: center;
-    }
-
-    /* Ajustar grid para características del terreno */
-    .features-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .feature-item h3 {
-        font-size: 18px;
-    }
-
-    .feature-item p {
-        font-size: 14px;
-    }
-
-    /* Estilos del modal de pago */
-    .modal-content {
-        width: 100%;
-        padding: 20px;
-        font-size: 14px;
-    }
-
-    /* Publicidad de Facebook */
-    .facebook-ads h2 {
-        font-size: 18px;
-        text-align: center;
-    }
-
-    .ad-description {
-        font-size: 14px;
-    }
-
-    /* Formulario de reservas */
-    .form-group label {
-        font-size: 16px;
-    }
-
-    .form-group input {
-        font-size: 14px;
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    .btn {
-        font-size: 16px;
-        padding: 12px;
-        width: 100%;
-    }
-
-    /* Lista de reservas */
-    .reservations-list {
-        padding-left: 0;
-        list-style: none;
-    }
-
-    /* Icono de WhatsApp */
-    .whatsapp-icon {
-        font-size: 50px;
-        bottom: 20px;
-        right: 20px;
-    }
-
-    /* Ajustes generales de pie de página */
-    footer p {
-        font-size: 12px;
-        text-align: center;
-    }
-
-  .facebook-ads {
-        padding: 20px 10px;
-        text-align: center;
-    }
-
-    .facebook-ads h2 {
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-
-    .facebook-ads p.ad-description {
-        font-size: 16px;
-        line-height: 1.5;
-        margin-bottom: 20px;
-    }
-
-    .facebook-ads .fb-post {
-        width: 100% !important; /* Asegura que la publicación de Facebook ocupe todo el ancho disponible */
-        max-width: 500px;       /* Limita el ancho máximo para que no se vea demasiado grande en pantallas más grandes */
-        margin: 0 auto;         /* Centra la publicación */
-    }
-
-
-    /* Ajusta el contenedor para que ocupe todo el ancho disponible sin dejar márgenes grandes */
-    .facebook-ads .container {
-        width: 100%;
-        padding: 0 15px;
-    }
-    
 }
+
 /* Media queries para iPhone SE, 12, 13 y pantallas más pequeñas */
 @media (max-width: 600px) {
     body {
