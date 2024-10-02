@@ -14,6 +14,7 @@ app.use(cors({
     allowedHeaders: 'Content-Type'
 }));
 
+
 // Configurar la conexión con la base de datos MySQL
 const db = mysql.createConnection({
     host: 'localhost',
@@ -118,5 +119,5 @@ app.post('/reservas', (req, res) => {
 
 // Iniciar el servidor
 app.listen(port, () => {
-    console.log(`Servidor corriendo en http://192.168.1.73:${port}`);
+    console.log(`Servidor corriendo en http://localhost:${port}`);
 });
