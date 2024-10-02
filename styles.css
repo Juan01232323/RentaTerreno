@@ -873,65 +873,139 @@ footer::after {
 }
 
 
-/* Responsiveness */
+
+/* Media queries para pantallas de 768px */
 @media (max-width: 768px) {
-    .features-list {
-        flex-direction: column;
+    .container {
+        width: 95%;
+    }
+    
+    .main-header h1 {
+        font-size: 2.5rem;
     }
 
-    .reservations-list {
-        flex-direction: column;
-        gap: 10px;
+    .hero {
+        height: 70vh;
     }
 
-    .reservations-list li {
-        flex-direction: column;
-        align-items: flex-start;
+    .hero h1 {
+        font-size: 2rem;
     }
 
-    .reservations-list li .eliminar-btn {
-        margin-top: 10px;
-        width: 100%;
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
     }
 
     .features-grid {
         flex-direction: column;
-        align-items: center;
+        gap: 20px;
     }
 
     .feature-item {
         max-width: 100%;
-        margin-bottom: 30px;
+        flex: 1 1 100%;
     }
 
-    .form-group {
-        max-width: 100%;
+    .modal-content {
+        width: 90%;
+    }
+
+    .reservation {
+        padding: 40px 20px;
+    }
+
+    .reservation h2 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Media queries para iPhone SE, 12, 13 y pantallas más pequeñas */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .main-header h1 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
     }
 
     .hero h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .hero p {
         font-size: 1rem;
     }
 
-    .hero .btn {
-        padding: 12px 30px;
-        font-size: 1rem;
+    .features-grid {
+        flex-direction: column;
+    }
+
+    .feature-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .property-details h2 {
+        font-size: 2rem;
+    }
+
+    .features-list li {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .reservation h2 {
+        font-size: 1.8rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
     }
 
     .facebook-ads h2 {
         font-size: 1.8rem;
     }
 
-    .facebook-ads .ad-description {
-        font-size: 1.1rem;
+    .modal-content {
+        width: 85%;
+        padding: 20px;
     }
 
-    .facebook-ads .facebook-post {
-        width: 100%;
-        max-width: 100%;
+    .modal-button {
+        font-size: 16px;
+        padding: 10px 20px;
     }
 
+    .secondary-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
 }
