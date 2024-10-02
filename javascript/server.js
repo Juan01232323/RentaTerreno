@@ -8,11 +8,7 @@ const port = 3000;
 app.use(bodyParser.json());
 
 const cors = require('cors');
-app.use(cors({
-    origin: '*', // Permite todos los orígenes
-    methods: 'GET, POST, DELETE', // Métodos permitidos
-    allowedHeaders: 'Content-Type'
-}));
+app.use(cors());
 
 
 // Configurar la conexión con la base de datos MySQL
