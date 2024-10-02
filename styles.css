@@ -873,61 +873,104 @@ footer::after {
 }
 
 
-
-/* Media queries para pantallas de 768px */
+/* Estilos específicos para móviles */
 @media (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-    
+
     .main-header h1 {
-        font-size: 2.5rem;
+        font-size: 24px;
+        text-align: center;
     }
 
-    .hero {
-        height: 70vh;
+    .hero-content h1 {
+        font-size: 20px;
+        text-align: center;
     }
 
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero h2 {
-        font-size: 1.8rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .features-grid {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .feature-item {
-        max-width: 100%;
-        flex: 1 1 100%;
-    }
-
-    .modal-content {
-        width: 90%;
-    }
-
-    .reservation {
-        padding: 40px 20px;
-    }
-
-    .reservation h2 {
-        font-size: 2rem;
+    .hero-content p {
+        font-size: 16px;
+        text-align: center;
     }
 
     .cta-button {
-        font-size: 1rem;
-        padding: 10px 20px;
+        font-size: 18px;
+        padding: 12px 24px;
+        width: 100%;
+    }
+
+    .notification p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Ajustar grid para características del terreno */
+    .features-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .feature-item h3 {
+        font-size: 18px;
+    }
+
+    .feature-item p {
+        font-size: 14px;
+    }
+
+    /* Estilos del modal de pago */
+    .modal-content {
+        width: 100%;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    /* Publicidad de Facebook */
+    .facebook-ads h2 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .ad-description {
+        font-size: 14px;
+    }
+
+    /* Formulario de reservas */
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input {
+        font-size: 14px;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px;
+        width: 100%;
+    }
+
+    /* Lista de reservas */
+    .reservations-list {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    /* Icono de WhatsApp */
+    .whatsapp-icon {
+        font-size: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    /* Ajustes generales de pie de página */
+    footer p {
+        font-size: 12px;
+        text-align: center;
     }
 }
-
 /* Media queries para iPhone SE, 12, 13 y pantallas más pequeñas */
 @media (max-width: 600px) {
     body {
