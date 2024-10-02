@@ -915,10 +915,16 @@ footer::after {
     }
 
     .facebook-ads .facebook-post {
-        width: 100000000%; /* Asegura que la publicación ocupe todo el ancho disponible en móviles */
+        width: 100%; /* Asegura que la publicación ocupe todo el ancho disponible en móviles */
         margin: 0 auto; /* Centra la publicación */
         padding: 10px; /* Asegura algo de espacio interno para que no se vea apretado */
     }
+
+    .facebook-ads img {
+        width: 100%; /* Asegura que las imágenes ocupen el ancho completo del contenedor */
+        height: auto; /* Mantén la proporción de la imagen */
+    }
+    
 
     /* Si es necesario, también puedes reducir el tamaño del texto y las imágenes */
     .facebook-ads h2 {
