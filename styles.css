@@ -571,7 +571,7 @@ body {
     border-radius: 15px;
     box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     color: white;
     margin-top: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
