@@ -62,7 +62,7 @@ function mostrarReservas() {
 
 // Función para obtener las reservas desde el servidor (API)
 function obtenerReservasServidor() {
-    fetch('https://f29c-2806-261-a401-55f-7c88-ee9f-9e2c-9538.ngrok-free.app/reservas')
+    fetch('https://f29c-2806-261-a401-55f-7c88-ee9f-9e2c-9538.ngrok-free.app')
         .then(response => response.json())
         .then(data => {
             mostrarReservasServidor(data);
@@ -137,7 +137,7 @@ function mostrarReservasConTiempoRestante() {
 
 // Función para eliminar una reserva
 function eliminarReserva(id) {
-    fetch(`https://f29c-2806-261-a401-55f-7c88-ee9f-9e2c-9538.ngrok-free.app/reservas/${id}`, {
+    fetch(`https://f29c-2806-261-a401-55f-7c88-ee9f-9e2c-9538.ngrok-free.app/${id}`, {
         method: 'DELETE',
     })
     .then(response => {
@@ -204,7 +204,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     }
 
     // Envío de los datos al servidor
-    fetch('https://f29c-2806-261-a401-55f-7c88-ee9f-9e2c-9538.ngrok-free.app/reservas', {
+    fetch('https://f29c-2806-261-a401-55f-7c88-ee9f-9e2c-9538.ngrok-free.app', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -232,7 +232,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
 
 function obtenerReservasConPolling() {
     setInterval(() => {
-        fetch('https://f29c-2806-261-a401-55f-7c88-ee9f-9e2c-9538.ngrok-free.app/reservas')
+        fetch('https://f29c-2806-261-a401-55f-7c88-ee9f-9e2c-9538.ngrok-free.app')
             .then(response => response.json())
             .then(data => {
                 mostrarReservasServidor(data); // Actualizar la lista de reservas en el DOM
