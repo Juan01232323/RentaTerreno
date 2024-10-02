@@ -263,7 +263,36 @@ function convertirFormatoFecha(fecha) {
     return `${partes[2]}-${partes[1]}-${partes[0]}`;
 }
 
+// Función para sincronizar reservas locales cuando hay conexión
+function sincronizarReservasLocales() {
+    const reservas = obtenerReservas();
 
+    if (reservas.length > 0) {
+        reservas.forEach((reserva) => {
+            fetch('http://localhost:3000/reservas', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(reserva),
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Reserva sincronizada con el servidor:', data);
+                // Si la sincronización fue exitosa, eliminar la reserva de localStorage
+                const nuevasReservas = obtenerReservas().filter(r => r.fecha !== reserva.fecha);
+                localStorage.setItem('reservas', JSON.stringify(nuevasReservas));
+                mostrarReservas(); // Actualizar la lista de reservas
+            })
+            .catch(error => {
+                console.error('Error al sincronizar reserva:', error);
+            });
+        });
+    }
+}
+
+// Ejecutar sincronización cuando vuelva a haber conexión
+window.addEventListener('online', sincronizarReservasLocales);
 
 // Mostrar reservas del usuario al cargar la página
 window.onload = function() {
