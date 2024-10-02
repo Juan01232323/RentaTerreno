@@ -1,4 +1,5 @@
 
+
 // Función para obtener las reservas del LocalStorage
 function obtenerReservas() {
     const reservas = localStorage.getItem('reservas');
@@ -62,7 +63,7 @@ function mostrarReservas() {
 
 // Función para obtener las reservas desde el servidor (API)
 function obtenerReservasServidor() {
-    fetch('http://192.168.1.73:3000/reservas')
+    fetch('http://localhost:3000/reservas')
         .then(response => response.json())
         .then(data => {
             mostrarReservasServidor(data);
@@ -137,7 +138,7 @@ function mostrarReservasConTiempoRestante() {
 
 // Función para eliminar una reserva
 function eliminarReserva(id) {
-    fetch(`http://192.168.1.73:3000/reservas/${id}`, {
+    fetch(`http://localhost:3000/reservas/${id}`, {
         method: 'DELETE',
     })
     .then(response => {
@@ -204,7 +205,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     }
 
     // Envío de los datos al servidor
-    fetch('http://192.168.1.73:3000/reservas', {
+    fetch('http://localhost:3000/reservas', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -232,7 +233,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
 
 function obtenerReservasConPolling() {
     setInterval(() => {
-        fetch('http://192.168.1.73:3000/reservas')
+        fetch('http://localhost:3000/reservas')
             .then(response => response.json())
             .then(data => {
                 mostrarReservasServidor(data); // Actualizar la lista de reservas en el DOM
@@ -273,4 +274,3 @@ window.onload = function() {
     mostrarReservasConTiempoRestante(); // Mostrar reservas con tiempo restante
     eliminarReservasExpiradas(); // Verificar y eliminar reservas expiradas al cargar la página
 };
-
