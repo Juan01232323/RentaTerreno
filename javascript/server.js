@@ -16,7 +16,7 @@ app.use(cors({
 
 // Configurar la conexión con la base de datos MySQL
 const db = mysql.createConnection({
-    host: ' 192.168.56.1',
+    host: 'localhost',
     user: 'root',  // Reemplaza con tu usuario de MySQL
     password: '123456',  // Reemplaza con tu contraseña
     database: 'reservas'
@@ -118,5 +118,5 @@ app.post('/reservas', (req, res) => {
 
 // Iniciar el servidor
 app.listen(port, () => {
-    console.log(`Servidor corriendo en http://192.168.56.1:${port}`);
+    console.log(`Servidor corriendo en http://192.168.1.73:${port}`);
 });
