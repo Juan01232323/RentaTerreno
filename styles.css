@@ -925,6 +925,31 @@ footer::after {
         font-size: 2rem;
     }
 
+    .facebook-ads h2 {
+        font-size: 1.8rem; /* Tamaño de fuente más pequeño para móviles */
+        text-align: center; /* Centrado en móviles */
+    }
+
+    .facebook-ads .ad-description {
+        font-size: 1rem; /* Reducir tamaño del texto */
+        max-width: 90%; /* Limitar el ancho del contenido */
+        margin: 0 5%; /* Márgenes laterales pequeños para mejorar el espaciado */
+    }
+
+    .facebook-ads .facebook-post {
+        width: 100%; /* Asegura que el post ocupe todo el ancho disponible */
+        padding: 10px; /* Reducir el padding en móviles */
+        transform: none; /* No aplicar zoom en móviles */
+    }
+
+    .facebook-ads:hover {
+        transform: none; /* Eliminar zoom en hover para mejorar la usabilidad en móviles */
+    }
+
+    .facebook-ads .facebook-post:hover {
+        transform: none; /* Evitar la rotación y el zoom en móviles */
+    }
+
     .cta-button {
         font-size: 1rem;
         padding: 10px 20px;
