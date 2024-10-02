@@ -12,11 +12,10 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px; /* Pequeño margen interno para evitar que el contenido se pegue a los bordes */
+    box-sizing: border-box;
 }
-
 
 
 /* Estilo para el botón "Eliminar" */
@@ -120,13 +119,16 @@ body {
 /* Sección de publicidad de Facebook */
 .facebook-ads {
     background: linear-gradient(135deg, #e0f7ff, #f5f5f5); /* Fondo degradado moderno */
-    padding: 60px 30px;
+    padding: 20px; /* Espaciado adecuado en móviles */
+    max-width: 100%; /* Ocupa el 100% del ancho en dispositivos móviles */
     text-align: center;
     border-radius: 15px;
     box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15); /* Sombra envolvente más suave */
-    margin: 60px 0;
+    margin: 0 auto; /* Centrado */
     transition: all 0.4s ease-in-out; /* Transición general */
     opacity: 0;
+    box-sizing: border-box;
+
     transform: translateY(40px);
     animation: fadeInUp 1.2s forwards; /* Animación suave de entrada */
 }
@@ -908,28 +910,16 @@ footer::after {
     }
 
     .facebook-ads h2 {
-        font-size: 1.8rem; /* Tamaño de fuente más pequeño para móviles */
-        text-align: center; /* Centrado en móviles */
+        font-size: 1.6rem; /* Ajusta el tamaño de la fuente */
     }
 
     .facebook-ads .ad-description {
-        font-size: 1rem; /* Reducir tamaño del texto */
-        max-width: 90%; /* Limitar el ancho del contenido */
-        margin: 0 5%; /* Márgenes laterales pequeños para mejorar el espaciado */
+        font-size: 1rem; /* Reduce el tamaño del texto */
+        max-width: 90%; /* Mantén los márgenes laterales ajustados */
     }
 
     .facebook-ads .facebook-post {
         width: 100%; /* Asegura que el post ocupe todo el ancho disponible */
-        padding: 10px; /* Reducir el padding en móviles */
-        transform: none; /* No aplicar zoom en móviles */
-    }
-
-    .facebook-ads:hover {
-        transform: none; /* Eliminar zoom en hover para mejorar la usabilidad en móviles */
-    }
-
-    .facebook-ads .facebook-post:hover {
-        transform: none; /* Evitar la rotación y el zoom en móviles */
     }
 
     .cta-button {
