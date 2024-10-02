@@ -62,7 +62,7 @@ function mostrarReservas() {
 
 // Función para obtener las reservas desde el servidor (API)
 function obtenerReservasServidor() {
-    fetch('http://localhost:3000/reservas')
+    fetch('http://192.168.56.1:3000/reservas')
         .then(response => response.json())
         .then(data => {
             mostrarReservasServidor(data);
@@ -137,7 +137,7 @@ function mostrarReservasConTiempoRestante() {
 
 // Función para eliminar una reserva
 function eliminarReserva(id) {
-    fetch(`http://localhost:3000/reservas/${id}`, {
+    fetch(`http://192.168.56.1:3000/reservas/${id}`, {
         method: 'DELETE',
     })
     .then(response => {
@@ -204,7 +204,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     }
 
     // Envío de los datos al servidor
-    fetch('http://localhost:3000/reservas', {
+    fetch('http://192.168.56.1:3000/reservas', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -232,7 +232,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
 
 function obtenerReservasConPolling() {
     setInterval(() => {
-        fetch('http://localhost:3000/reservas')
+        fetch('http://192.168.56.1:3000/reservas')
             .then(response => response.json())
             .then(data => {
                 mostrarReservasServidor(data); // Actualizar la lista de reservas en el DOM
@@ -262,6 +262,7 @@ function convertirFormatoFecha(fecha) {
     // Convertir a formato "DD-MM-YYYY"
     return `${partes[2]}-${partes[1]}-${partes[0]}`;
 }
+
 
 
 // Mostrar reservas del usuario al cargar la página
