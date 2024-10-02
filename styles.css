@@ -881,6 +881,27 @@ footer::after {
         text-align: center;
     }
 
+       #reservationForm {
+        padding: 15px;
+    }
+
+    input, select, button {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #userReservations {
+        font-size: 14px;
+    }
+
+    /* Ajustar el tamaño de los mensajes de error y éxito */
+    #message {
+        font-size: 16px;
+        text-align: center;
+    }
+
     .hero-content h1 {
         font-size: 20px;
         text-align: center;
