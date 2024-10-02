@@ -8,12 +8,15 @@ const port = 3000;
 app.use(bodyParser.json());
 
 const cors = require('cors');
-app.use(cors());
-
+app.use(cors({
+    origin: '*', // Permite todos los orígenes
+    methods: 'GET, POST, DELETE', // Métodos permitidos
+    allowedHeaders: 'Content-Type'
+}));
 
 // Configurar la conexión con la base de datos MySQL
 const db = mysql.createConnection({
-    host: 'localhost',
+    host: ' 192.168.56.1',
     user: 'root',  // Reemplaza con tu usuario de MySQL
     password: '123456',  // Reemplaza con tu contraseña
     database: 'reservas'
@@ -115,5 +118,5 @@ app.post('/reservas', (req, res) => {
 
 // Iniciar el servidor
 app.listen(port, () => {
-    console.log(`Servidor corriendo en http://localhost:${port}`);
+    console.log(`Servidor corriendo en http://192.168.56.1:${port}`);
 });
