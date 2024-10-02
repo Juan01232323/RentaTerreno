@@ -970,6 +970,35 @@ footer::after {
         font-size: 12px;
         text-align: center;
     }
+
+  .facebook-ads {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .facebook-ads h2 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .facebook-ads p.ad-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .facebook-ads .fb-post {
+        width: 100% !important; /* Asegura que la publicación de Facebook ocupe todo el ancho disponible */
+        max-width: 500px;       /* Limita el ancho máximo para que no se vea demasiado grande en pantallas más grandes */
+        margin: 0 auto;         /* Centra la publicación */
+    }
+
+    /* Ajusta el contenedor para que ocupe todo el ancho disponible sin dejar márgenes grandes */
+    .facebook-ads .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
 }
 /* Media queries para iPhone SE, 12, 13 y pantallas más pequeñas */
 @media (max-width: 600px) {
