@@ -1014,6 +1014,10 @@ footer::after {
         margin: 0 auto;         /* Centra la publicación */
     }
 
+    .reservations-list li {
+        padding: 10px;
+    }
+
     /* Ajusta el contenedor para que ocupe todo el ancho disponible sin dejar márgenes grandes */
     .facebook-ads .container {
         width: 100%;
