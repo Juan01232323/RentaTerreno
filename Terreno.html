@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terreno en Renta - Lomas Campestre Estaño #7</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <h1>Terreno en Renta - Lomas Campestre Estaño #7</h1>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Alquila el espacio perfecto</h1>
+            <p>El lugar ideal para tus eventos o proyectos.</p>
+            <button class="cta-button" id="reservarBtn">RESERVAR AHORA</button>
+            
+            <section class="notification">
+                <div class="container">
+                    <div class="notification-box">
+                    
+
+                        <p> Antes de hacer el pago de la reserva, contáctate con el dueño por medio de su WhatsApp.</p>
+                        
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    </section>
+
+    <main>
+        <section class="property-details">
+            <div class="container">
+                <h2>Características del Terreno</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="icon-container">
+                            <i class="fas fa-umbrella-beach"></i>
+                        </div>
+                        <h3>Terraza equipada</h3>
+                        <p>Capacidad para 30 personas</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-container">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h3>Área verde</h3>
+                        <p>Perfecta para actividades al aire libre</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-container">
+                            <i class="fas fa-bath"></i>
+                        </div>
+                        <h3>Baños completos</h3>
+                        <p>Dos baños totalmente equipados</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-container">
+                            <i class="fas fa-swimming-pool"></i>
+                        </div>
+                        <h3>Alberca</h3>
+                        <p>Dimensiones de 5x2.80 mts con hidromasaje</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon-container">
+                            <i class="fas fa-shower"></i>
+                        </div>
+                        <h3>Agua caliente</h3>
+                        <p>Servicios incluidos para comodidad</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+<!-- Modal para opciones de pago -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>¿Cómo deseas proceder con el pago?</h2>
+        <p>Elige si deseas pagar un anticipo o el monto completo:</p>
+        <button id="payAnticipo" class="modal-button">Pagar Anticipo (750 MXN)</button>
+        <button id="payCompleto" class="modal-button">Pagar Completo (2500 MXN)</button>
+        <button id="alreadyPaid" class="modal-button secondary-button">Ya pagué el anticipo</button>
+    </div>
+</div>
+
+        <section class="facebook-ads">
+            <div class="container">
+                <h2>¡Ven a disfrutar nuestro terreno en Lomas Campestre!</h2>
+                <p class="ad-description">
+                    Relájate, disfruta de la naturaleza y pasa un día increíble con tu familia. 
+                    ¡Comparte esta publicación y ayuda a que más personas conozcan este espacio único para descansar y divertirse!
+                </p>
+                <div class="facebook-post">
+                    <div class="fb-post" 
+                         data-href="https://www.facebook.com/photo/?fbid=105661281538679&set=pcb.105662234871917"
+                         data-width="500">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+        
+        <section class="reservation">
+            <div class="container">
+                <h2>Reserva tu Fecha</h2>
+                <form id="reservationForm" class="form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" placeholder="Nombre que identifique su reserva" required><br>
+
+  <label for="telefono">Número de Teléfono (OPCIONAL NO OBLIGATORIO):</label>
+  <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="10 dígitos"><br>
+  
+                        <label for="date">Fecha de reserva</label>
+                        <input type="date" id="date" name="date" required onchange="formatDate(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Hora de reserva</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Reservar</button>
+                </form>
+                <p id="message"></p>
+            </div>
+
+            <section class="notification">
+                <div class="container">
+                    <div class="notification-box">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p><strong>Nota importante:</strong> Todas las reservas registradas se eliminarán automáticamente cada <strong>24 horas</strong> para llevar un control adecuado. ¡Asegúrate de realizar tu reserva dentro de ese tiempo y de tomarle captura a tu reserva!</p>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+
+        <a href="https://wa.me/3921311381" class="whatsapp-icon" target="_blank" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          
+
+        <section class="user-reservations">
+            <div class="container">
+                <h2>Reservas</h2>
+                <ul id="userReservations" class="reservations-list"></ul>
+            </div>
+        </div>
+   
+        </section>
+    
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2024 Publicidad de Terrenos - Todos los derechos reservados.</p>
+          
+            </div>
+        </div>
+    </footer>
+    <!-- SDK de Facebook para incrustar publicaciones -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v17.0"></script>
+
+<script src="javascript/paypal.js"></script>
+
+    <script src="javascript/script.js"></script>
+</body>
+</html>
