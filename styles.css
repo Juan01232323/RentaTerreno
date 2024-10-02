@@ -137,7 +137,6 @@ body {
         transform: translateY(0);
     }
 }
-
 .facebook-ads:hover {
     background: linear-gradient(135deg, #c2e7ff, #f0f0f0); /* Fondo ligeramente más azul al hacer hover */
     box-shadow: 0px 12px 35px rgba(0, 140, 186, 0.4); /* Sombra más profunda */
@@ -187,23 +186,6 @@ body {
 .facebook-ads .facebook-post:hover {
     transform: scale(1.1) rotate(1deg); /* Zoom más grande y ligera rotación */
     box-shadow: 0px 10px 35px rgba(0, 140, 186, 0.5); /* Sombra más envolvente */
-}
-
-
-/* Animación adicional en la sección */
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-.facebook-ads .facebook-post {
-    animation: slideIn 0.7s ease forwards; /* Entrada suave */
 }
 
 .whatsapp-icon {
