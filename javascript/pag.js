@@ -42,6 +42,25 @@ function showModal() {
     };
 }
 
+
+// Detectar el uso de la tecla 'Print Screen'
+window.addEventListener("keyup", function(event) {
+    if (event.key === "PrintScreen") {
+        alert("No se permite tomar capturas de pantalla.");
+        // Podrías intentar vaciar el portapapeles (no siempre funciona en todos los navegadores)
+        navigator.clipboard.writeText('No se permite capturar imágenes de esta página');
+    }
+});
+
+// Detectar combinaciones de teclas para capturas en algunos sistemas operativos (Ctrl+Shift+S en Windows)
+window.addEventListener("keydown", function(event) {
+    if (event.ctrlKey && event.shiftKey && event.key === 'S') {
+        alert("No se permite tomar capturas de pantalla.");
+        event.preventDefault();
+    }
+});
+
+
 // Prevenir el uso del teclado para descargar imágenes (Ctrl + S, Ctrl + U, etc.)
 document.addEventListener('keydown', function(event) {
     if (event.ctrlKey && (event.key === 's' || event.key === 'u' || event.key === 'Shift')) {
