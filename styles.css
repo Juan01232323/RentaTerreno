@@ -121,6 +121,7 @@ body {
     border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.1);
     position: relative;
+    user-select: none; /* Desactivar la selección de la imagen */
     overflow: hidden; /* Para que la línea de animación no se salga del borde */
 }
 
