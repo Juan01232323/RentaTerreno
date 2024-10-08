@@ -63,14 +63,18 @@ app.delete('/reservas/:id', (req, res) => {
 
 const cron = require('node-cron');
 
-// Eliminar reservas expiradas cada 24 horas (a la medianoche)
+// Eliminar reservas que hayan pasado más de 24 horas
 cron.schedule('0 0 * * *', () => {
     console.log('Ejecutando tarea de eliminación de reservas expiradas');
 
-    const now = new Date().toISOString().slice(0, 19).replace('T', ' ');
-    const sql = 'DELETE FROM reservas WHERE CONCAT(fecha, " ", hora) < ?';
+    const ahora = new Date(); // Fecha y hora actuales
+    ahora.setHours(ahora.getHours() - 24); // Restar 24 horas
 
-    db.query(sql, [now], (err, result) => {
+    // Convertir la fecha a un formato compatible con MySQL
+    const ahoraFormateado = ahora.toISOString().slice(0, 19).replace('T', ' ');
+
+    const sql = 'DELETE FROM reservas WHERE CONCAT(fecha, " ", hora) < ?';
+    db.query(sql, [ahoraFormateado], (err, result) => {
         if (err) {
             console.error('Error al eliminar reservas expiradas:', err);
         } else {
@@ -78,6 +82,7 @@ cron.schedule('0 0 * * *', () => {
         }
     });
 });
+
 
 
 
