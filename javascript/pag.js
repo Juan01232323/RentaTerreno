@@ -10,6 +10,43 @@ function showSlides(n) {
         slide.style.opacity = index === slideIndex ? '1' : '0.7';
     });
 }
+
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // Deshabilita el clic derecho
+});
+
+
+document.addEventListener('keydown', function(event) {
+    // Detecta Ctrl + P o Cmd + P (impresión)
+    if ((event.ctrlKey || event.metaKey) && event.key === 'p') {
+        event.preventDefault(); // Previene la acción de imprimir
+        showModalCapture(); // Muestra el modal de advertencia
+    }
+
+    // Detectar botón de impresión en Windows (Print Screen)
+    if (event.key === 'PrintScreen') {
+        event.preventDefault(); // Previene la captura de pantalla
+        showModalCapture(); // Muestra el modal de advertencia
+    }
+
+    // Aunque no puedes prevenir Windows + Shift + S, puedes dar un mensaje general
+    if ((event.key === 's' || event.key === 'S') && event.shiftKey && event.metaKey) {
+        // Esto solo detectará Shift+Meta (tecla de Windows) + S, pero no podrás bloquearlo
+        showModalCapture(); // Muestra el modal
+    }
+});
+
+// Función para mostrar el modal de advertencia
+function showModalCapture() {
+    const modal = document.getElementById("captureModal");
+    modal.style.display = "block"; // Mostrar modal
+
+    // Cerrar modal después de 3 segundos automáticamente
+    setTimeout(function() {
+        modal.style.display = "none";
+    }, 3000);
+}
+
 // Prevenir la descarga de imágenes en la galería y mostrar modal
 document.querySelectorAll('.gallery-item img').forEach(img => {
     // Prevenir menú contextual (clic derecho)
@@ -43,31 +80,6 @@ function showModal() {
 }
 
 
-// Detectar el uso de la tecla 'Print Screen'
-window.addEventListener("keyup", function(event) {
-    if (event.key === "PrintScreen") {
-        alert("No se permite tomar capturas de pantalla.");
-        // Podrías intentar vaciar el portapapeles (no siempre funciona en todos los navegadores)
-        navigator.clipboard.writeText('No se permite capturar imágenes de esta página');
-    }
-});
-
-// Detectar combinaciones de teclas para capturas en algunos sistemas operativos (Ctrl+Shift+S en Windows)
-window.addEventListener("keydown", function(event) {
-    if (event.ctrlKey && event.shiftKey && event.key === 'S') {
-        alert("No se permite tomar capturas de pantalla.");
-        event.preventDefault();
-    }
-});
-
-
-// Prevenir el uso del teclado para descargar imágenes (Ctrl + S, Ctrl + U, etc.)
-document.addEventListener('keydown', function(event) {
-    if (event.ctrlKey && (event.key === 's' || event.key === 'u' || event.key === 'Shift')) {
-        event.preventDefault(); // Prevenir teclas
-        showModal(); // Mostrar modal
-    }
-});
 
 document.querySelector('.prev').addEventListener('click', () => {
     slideIndex--;
