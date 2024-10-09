@@ -95,30 +95,6 @@ body {
     background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
 }
 
-/* Flecha para expandir/cerrar */
-.expand-arrow {
-    cursor: pointer;
-    font-size: 2rem;
-    color: #006d9c;
-    margin-top: 10px;
-    transition: transform 0.4s ease;
-}
-
-/* Contenedor oculto inicialmente */
-.facebook-post-container {
-    display: none;
-    max-width: 100%;
-}
-
-/* Publicación visible al hacer clic */
-.facebook-post-container.active {
-    display: block;
-}
-
-/* Cambios visuales cuando se activa */
-.expand-arrow.active {
-    transform: rotate(180deg); /* Rotar la flecha hacia arriba */
-}
 
 
 /* Contenido del modal */
@@ -385,6 +361,33 @@ body {
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+
+/* Flecha para expandir/cerrar (oculta por defecto) */
+.expand-arrow {
+    display: none; /* No mostrar por defecto */
+    cursor: pointer;
+    font-size: 2rem;
+    color: #006d9c;
+    margin-top: 10px;
+    transition: transform 0.4s ease;
+}
+
+/* Contenedor oculto inicialmente */
+.facebook-post-container {
+    display: block;
+    max-width: 100%;
+}
+
+/* Publicación visible al hacer clic */
+.facebook-post-container.active {
+    display: block;
+}
+
+/* Cambios visuales cuando se activa */
+.expand-arrow.active {
+    transform: rotate(180deg); /* Rotar la flecha hacia arriba */
 }
 
 /* Sección de publicidad de Facebook */
@@ -1195,6 +1198,32 @@ footer::after {
 
     .reservation h2 {
         font-size: 2rem;
+    }
+
+    /* Flecha visible solo en móviles */
+    .expand-arrow {
+        display: block;
+        cursor: pointer;
+        font-size: 2rem;
+        color: #006d9c;
+        margin-top: 10px;
+        transition: transform 0.4s ease;
+    }
+
+    /* Contenedor oculto inicialmente en móviles */
+    .facebook-post-container {
+        display: none;
+        max-width: 100%;
+    }
+
+    /* Publicación visible cuando se expande */
+    .facebook-post-container.active {
+        display: block;
+    }
+
+    /* Cambios visuales cuando la flecha está activa (rotación) */
+    .expand-arrow.active {
+        transform: rotate(180deg); /* Rotar la flecha hacia arriba */
     }
 
     .facebook-ads {
