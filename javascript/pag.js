@@ -36,17 +36,6 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Función para mostrar el modal de advertencia
-function showModalCapture() {
-    const modal = document.getElementById("captureModal");
-    modal.style.display = "block"; // Mostrar modal
-
-    // Cerrar modal después de 3 segundos automáticamente
-    setTimeout(function() {
-        modal.style.display = "none";
-    }, 3000);
-}
-
 // Prevenir la descarga de imágenes en la galería y mostrar modal
 document.querySelectorAll('.gallery-item img').forEach(img => {
     // Prevenir menú contextual (clic derecho)
