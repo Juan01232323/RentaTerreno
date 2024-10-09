@@ -1184,9 +1184,6 @@ footer::after {
     .facebook-ads .facebook-post {
         padding: 8px; /* Reducir aún más el padding */
         border-radius: 8px; /* Ajustar la curvatura */
-    }
-
-    .facebook-ads img {
         width: 100%; /* Asegurarse de que las imágenes ocupen todo el ancho en móviles */
         height: auto;
     }
@@ -1296,4 +1293,3 @@ footer::after {
         padding: 10px 20px;
     }
 }
-
