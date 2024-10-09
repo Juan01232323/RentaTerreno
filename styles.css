@@ -95,6 +95,30 @@ body {
     background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
 }
 
+/* Flecha para expandir/cerrar */
+.expand-arrow {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #006d9c;
+    margin-top: 10px;
+    transition: transform 0.4s ease;
+}
+
+/* Contenedor oculto inicialmente */
+.facebook-post-container {
+    display: none;
+    max-width: 100%;
+}
+
+/* Publicación visible al hacer clic */
+.facebook-post-container.active {
+    display: block;
+}
+
+/* Cambios visuales cuando se activa */
+.expand-arrow.active {
+    transform: rotate(180deg); /* Rotar la flecha hacia arriba */
+}
 
 
 /* Contenido del modal */
