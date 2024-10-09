@@ -297,31 +297,6 @@ body {
         transform: scale(1);
     }
 }
-/* Responsividad */
-@media (max-width: 768px) {
-    .gallery-slider {
-        max-width: 100%;
-        padding: 10px;
-    }
-
-    .gallery-item {
-        padding: 10px;
-    }
-
-    .gallery-item img {
-        max-width: 100%;
-        max-height: 320px;
-        border-radius: 10px;
-    }
-
-    .prev, .next {
-        font-size: 20px;
-        padding: 10px;
-    }
-}
-
-
-
 
 
 /* Estilos generales de la notificación */
@@ -1135,6 +1110,26 @@ footer::after {
 @media (max-width: 768px) {
     .container {
         width: 100%;
+        padding: 10px;
+    }
+
+    .gallery-slider {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .gallery-item {
+        padding: 10px;
+    }
+
+    .gallery-item img {
+        max-width: 100%;
+        max-height: 320px;
+        border-radius: 10px;
+    }
+
+    .prev, .next {
+        font-size: 20px;
         padding: 10px;
     }
     
