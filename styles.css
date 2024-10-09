@@ -395,6 +395,8 @@ body {
 .facebook-ads h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+    width: 100%; /* Asegura que las imágenes ocupen el ancho completo del contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
     font-size: 2.4rem; /* Tamaño de fuente ligeramente más grande */
     color: #006d9c; /* Azul más intenso */
     margin-bottom: 20px;
@@ -410,6 +412,8 @@ body {
     font-weight: 400;
     font-size: 1.2rem;
     color: #555;
+    width: 100%; /* Asegura que las imágenes ocupen el ancho completo del contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
     margin-bottom: 40px;
     line-height: 1.8;
     max-width: 700px;
@@ -421,6 +425,19 @@ body {
     color: #333; /* Texto más oscuro al hacer hover */
     transform: translateY(-5px); /* Sutil movimiento hacia arriba */
 }
+
+/* Publicación de Facebook */
+.facebook-ads .facebook-post {
+    display: inline-block;
+    width: 100%; /* Asegura que las imágenes ocupen el ancho completo del contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+    border: 1px solid #008cba; /* Borde más fino para un look elegante */
+    padding: 15px;
+    border-radius: 12px;
+    background-color: white;
+    transition: all 0.5s ease; /* Transiciones suaves */
+}
+
 
 .whatsapp-icon {
     position: fixed;
@@ -1184,6 +1201,9 @@ footer::after {
     .facebook-ads .facebook-post {
         padding: 8px; /* Reducir aún más el padding */
         border-radius: 8px; /* Ajustar la curvatura */
+    }
+
+    .facebook-ads img {
         width: 100%; /* Asegurarse de que las imágenes ocupen todo el ancho en móviles */
         height: auto;
     }
