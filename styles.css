@@ -422,22 +422,6 @@ body {
     transform: translateY(-5px); /* Sutil movimiento hacia arriba */
 }
 
-/* Publicación de Facebook */
-.facebook-ads .facebook-post {
-    display: inline-block;
-    border: 1px solid #008cba; /* Borde más fino para un look elegante */
-    padding: 15px;
-    border-radius: 12px;
-    background-color: white;
-    transition: all 0.5s ease; /* Transiciones suaves */
-}
-
-.facebook-ads img {
-    width: 100%; /* Asegura que las imágenes ocupen el ancho completo del contenedor */
-    height: auto; /* Mantén la proporción de la imagen */
-}
-
-
 .whatsapp-icon {
     position: fixed;
     bottom: 20px;
@@ -1312,3 +1296,4 @@ footer::after {
         padding: 10px 20px;
     }
 }
+
