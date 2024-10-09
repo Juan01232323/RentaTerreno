@@ -71,6 +71,19 @@ body {
     color: #000;
 }
 
+/* Estilo del botón de cerrar */
+.close1 {
+    color: #f00;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close1:hover, .close:focus {
+    color: #000;
+}
+
 /* Animación de aparición */
 @keyframes zoomIn {
     from {transform: scale(0.5); opacity: 0;}
