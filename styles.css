@@ -83,6 +83,25 @@ body {
     animation: zoomIn 0.5s ease; /* Efecto de aparición */
 }
 
+#countdown {
+    font-size: 1.5rem;  /* Tamaño de texto */
+    color: #ff6b6b;  /* Color del texto, puedes cambiarlo por otro si prefieres */
+    font-weight: bold;  /* Texto en negritas */
+    background-color: #ffe5e5;  /* Fondo claro para resaltar */
+    border: 2px solid #ff6b6b;  /* Borde con el mismo color que el texto */
+    padding: 10px;  /* Espaciado interno */
+    border-radius: 8px;  /* Bordes redondeados */
+    margin-bottom: 35px; /* Espacio debajo del formulario de reserva */
+
+    text-align: center;  /* Centrar el texto */
+    margin-top: 20px;  /* Separación del texto respecto a la lista de reservas */
+    max-width: 300px;  /* Ancho máximo del elemento */
+    margin-left: auto;  /* Centramos horizontalmente */
+    margin-right: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+}
+
+
 /* Estilo del fondo del modal */
 .modal1 {
     display: none; /* Oculto por defecto */
@@ -94,8 +113,6 @@ body {
     height: 100%; 
     background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
 }
-
-
 
 /* Contenido del modal */
 .modal-content1 {
@@ -1252,4 +1269,3 @@ footer::after {
         padding: 10px 20px;
     }
 }
-
