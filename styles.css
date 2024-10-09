@@ -391,18 +391,17 @@ body {
 /* Sección de publicidad de Facebook */
 .facebook-ads {
     background: linear-gradient(135deg, #e0f7ff, #f5f5f5); /* Fondo degradado moderno */
-    padding: 15px; /* Espaciado adecuado para móviles */
+    padding: 15px;
     max-width: 100%; /* Ocupa el 100% del ancho en dispositivos móviles */
     text-align: center;
     border-radius: 15px;
-
     box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.15); /* Sombra envolvente más suave */
-    margin: 0 auto; /* Centrado */
-    transition: all 0.4s ease-in-out; /* Transición general */
+    margin: 0 auto;
+    transition: all 0.4s ease-in-out;
     opacity: 0;
     box-sizing: border-box;
     transform: translateY(40px);
-    animation: fadeInUp 1.2s forwards; /* Animación suave de entrada */
+    animation: fadeInUp 1.2s forwards;
 }
 
 @keyframes fadeInUp {
@@ -412,10 +411,11 @@ body {
     }
 }
 .facebook-ads:hover {
-    background: linear-gradient(135deg, #c2e7ff, #f0f0f0); /* Fondo ligeramente más azul al hacer hover */
+    background: linear-gradient(135deg, #c2e7ff, #f0f0f0); /* Fondo más azul al hacer hover */
     box-shadow: 0px 12px 35px rgba(0, 140, 186, 0.4); /* Sombra más profunda */
     transform: scale(1.02); /* Zoom suave */
 }
+
 
 .facebook-ads h2 {
     font-family: 'Poppins', sans-serif;
@@ -1184,12 +1184,57 @@ footer::after {
         font-size: 2rem;
     }
 
+    .facebook-ads {
+        padding: 10px; /* Menos espacio alrededor en móviles */
+        box-shadow: none; /* Remover la sombra en móviles para simplificar el diseño */
+        border-radius: 8px; /* Menos curvatura en móviles */
+    }
+
+    .facebook-ads h2 {
+        font-size: 1.8rem; /* Reducir aún más el tamaño del título en móviles */
+        margin-bottom: 15px;
+    }
+
+    .facebook-ads .ad-description {
+        font-size: 1rem; /* Ajustar tamaño de fuente en móviles */
+        line-height: 1.5; /* Reducir la altura de línea */
+        margin-bottom: 20px; /* Menos espacio inferior */
+        max-width: 100%; /* Asegurarse de que ocupe todo el ancho disponible */
+    }
+
+    .facebook-ads .facebook-post {
+        padding: 8px; /* Reducir aún más el padding */
+        border-radius: 8px; /* Ajustar la curvatura */
+    }
+
+    .facebook-ads img {
+        width: 100%; /* Asegurarse de que las imágenes ocupen todo el ancho en móviles */
+        height: auto;
+    }
+
 
     .cta-button {
         font-size: 1rem;
         padding: 10px 20px;
     }
 }
+
+@media (max-width: 1024px) {
+    .facebook-ads h2 {
+        font-size: 2rem; /* Reducir el tamaño del texto */
+    }
+
+    .facebook-ads .ad-description {
+        font-size: 1.1rem; /* Ajustar el tamaño de la descripción */
+        margin-bottom: 30px; /* Reducir espacio inferior */
+        max-width: 90%; /* Reducir el ancho máximo */
+    }
+
+    .facebook-ads .facebook-post {
+        padding: 10px; /* Reducir el padding para que ocupe menos espacio */
+    }
+}
+
 
 /* Media queries para iPhone SE, 12, 13 y pantallas más pequeñas */
 @media (max-width: 600px) {
