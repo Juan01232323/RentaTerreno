@@ -95,6 +95,7 @@ function mostrarReservasServidor(reservas) {
 }
 
 
+
 // Función para calcular el tiempo restante para una reserva
 function calcularTiempoRestante(fechaReserva, horaReserva) {
     const fechaCompleta = new Date(`${fechaReserva}T${horaReserva}`);
@@ -264,6 +265,44 @@ function convertirFormatoFecha(fecha) {
 }
 
 
+// Función para calcular la diferencia en horas, minutos y segundos
+function calculateTimeRemaining() {
+    const now = new Date();
+    
+    // Configurar la próxima eliminación de reservas (a medianoche)
+    const nextRemoval = new Date();
+    nextRemoval.setHours(24, 0, 0, 0);  // Configura las 00:00 del siguiente día
+
+    // Diferencia entre la hora actual y la próxima eliminación
+    const timeDifference = nextRemoval - now;
+
+    // Si la diferencia es negativa, significa que es el próximo día
+    if (timeDifference < 0) {
+        nextRemoval.setDate(nextRemoval.getDate() + 1);  // Aumentar al día siguiente
+    }
+
+    // Calcular horas, minutos y segundos restantes
+    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+    return { hours, minutes, seconds };
+}
+
+// Función para mostrar la cuenta regresiva en el DOM
+function updateCountdown() {
+    const countdownElement = document.getElementById('countdown');
+    const { hours, minutes, seconds } = calculateTimeRemaining();
+
+    countdownElement.textContent = `Tiempo restante para eliminar todas las reservas: ${hours}h ${minutes}m ${seconds}s`;
+
+    // Actualizar cada segundo
+    setTimeout(updateCountdown, 1000);
+}
+
+// Iniciar la cuenta regresiva
+updateCountdown();
+
 
 // Mostrar reservas del usuario al cargar la página
 window.onload = function() {
@@ -273,3 +312,4 @@ window.onload = function() {
     mostrarReservasConTiempoRestante(); // Mostrar reservas con tiempo restante
     eliminarReservasExpiradas(); // Verificar y eliminar reservas expiradas al cargar la página
 };
+
