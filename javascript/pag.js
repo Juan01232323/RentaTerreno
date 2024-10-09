@@ -62,7 +62,7 @@ document.querySelectorAll('.gallery-item img').forEach(img => {
 // Función para mostrar el modal
 function showModal() {
     const modal = document.getElementById("customModal");
-    const closeBtn = document.querySelector(".close");
+    const closeBtn = document.querySelector(".close1");
 
     modal.style.display = "block"; // Mostrar modal
 
@@ -95,4 +95,3 @@ document.querySelector('.next').addEventListener('click', () => {
 
 // Iniciar la galería en el primer slide
 showSlides(slideIndex);
-
