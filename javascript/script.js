@@ -21,14 +21,8 @@ function guardarReserva(nombre, telefono, fecha, hora) {
 
 }
 
-function togglePost() {
-    const postContainer = document.querySelector('.facebook-post-container');
-    const arrow = document.querySelector('.expand-arrow');
-    
-    // Cambia la clase activa para mostrar/ocultar el contenido
-    postContainer.classList.toggle('active');
-    arrow.classList.toggle('active');
-}
+
+
 
 
 // Función para obtener la última reserva del LocalStorage
