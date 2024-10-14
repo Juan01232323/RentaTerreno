@@ -230,12 +230,11 @@ body {
     box-shadow: 0 15px 35px rgba(0, 255, 255, 0.5);
 }
 
-/* Estilos generales de la notificación */
 .notification {
-    margin-top: 20px;
-    padding: 15px;
-    background-color: #e0f7fa; /* Fondo azul claro */
-    border-left: 8px solid #26a69a; /* Borde verde agua */
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #e0f7fa;
+    border-left: 8px solid #26a69a;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
@@ -249,10 +248,10 @@ body {
 .notification-box {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    transition: all 0.3s ease-in-out;
+    gap: 15px;
+    transition: transform 0.3s ease;
 }
+
 
 /* Icono de la notificación */
 .notification-box i {
@@ -264,7 +263,7 @@ body {
 /* Texto de la notificación */
 .notification-box p {
     font-size: 16px;
-    color: #00796b; /* Verde oscuro */
+    color: #00796b;
     margin: 0;
 }
 
@@ -372,15 +371,12 @@ body {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
-
-
 .hero {
     position: relative;
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
-    margin-bottom: 12px; 
     align-items: center;
     justify-content: center;
     color: #fff;
@@ -394,20 +390,22 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6); /* Se aumenta la opacidad para más contraste */
     z-index: 1;
 }
 
-
+/* Contenido dentro del Hero */
 .hero .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
-    padding: 20px;
-    backdrop-filter: blur(5px);
+    max-width: 700px;
+    padding: 40px;
+    backdrop-filter: blur(8px);
     background: rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+
 /* Estilo del modal */
 .modal {
     display: none;
@@ -502,23 +500,26 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease-out;
 }
-
 .cta-button {
     background-color: #28a745;
     color: white;
     padding: 15px 30px;
     font-size: 1.2rem;
+    font-weight: bold;
     border: none;
     border-radius: 50px;
     text-decoration: none;
     text-transform: uppercase;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
     background-color: #218838;
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
 
 .hero h1 {
     font-size: 3.5rem;
@@ -527,6 +528,7 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
 }
+
 
 
 .hero h2 {
@@ -539,7 +541,6 @@ body {
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
-
 
 .hero .btn {
     padding: 15px 40px;
@@ -1133,6 +1134,10 @@ footer::after {
         padding: 10px;
     }
 
+    .hero .hero-content {
+        max-width: 90%;
+    }
+
     .main-header h1 {
         font-size: 1.8rem; 
     }
@@ -1142,7 +1147,7 @@ footer::after {
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .hero h2 {
@@ -1152,6 +1157,7 @@ footer::after {
     .hero p {
         font-size: 1.2rem;
     }
+
 
     .features-grid {
         flex-direction: column;
@@ -1198,6 +1204,14 @@ footer::after {
     .gallery h2 {
         font-size: 1.8rem;
         letter-spacing: 4px;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 12px 20px;
     }
     
     .prev, .next {
