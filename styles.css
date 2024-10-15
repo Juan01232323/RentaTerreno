@@ -1216,6 +1216,14 @@ footer::after {
         font-size: 2rem;
     }
 
+    .modal-content {
+        width: 90%;
+        max-width: none;
+        transform: translateY(110px); /* Mueve el modal hacia arriba */
+        padding: 20px;
+    }
+
+    
     .cta-button {
         font-size: 1rem;
         padding: 12px 20px;
@@ -1284,6 +1292,7 @@ footer::after {
 
     .modal-content {
         width: 85%;
+        transform: translateY(110px); /* Mueve el modal hacia arriba */
         padding: 20px;
     }
 
