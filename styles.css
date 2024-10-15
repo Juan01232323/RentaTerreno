@@ -1167,6 +1167,7 @@ footer::after {
     .modal-content {
         width: 90%;
         max-width: none;
+        transform: translateY(110px); /* Mueve el modal hacia arriba */
         padding: 20px;
     }
 
