@@ -14,7 +14,7 @@ document.getElementsByClassName("close")[0].onclick = function() {
 
     // Opción de pagar anticipo
     document.getElementById("payAnticipo").onclick = function() {
-        const anticipo = 750;
+        const anticipo = 500;
         const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=jcreynoso71@gmail.com&item_name=Anticipo%20Reserva%20Terreno&amount=${anticipo.toFixed(2)}&currency_code=MXN`;
         window.location.href = paypalUrl;
     };
@@ -28,7 +28,7 @@ document.getElementsByClassName("close")[0].onclick = function() {
 
     // Opción de pagar el saldo restante después del anticipo
     document.getElementById("alreadyPaid").onclick = function() {
-        const restante = 2500 - 750;
+        const restante = 2500 - 500;
         const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=jcreynoso71@gmail.com&item_name=Saldo%20Restante%20Reserva%20Terreno&amount=${restante.toFixed(2)}&currency_code=MXN`;
         window.location.href = paypalUrl;
     };
