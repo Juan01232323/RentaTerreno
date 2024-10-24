@@ -10,6 +10,23 @@ function obtenerReservas() {
     }
 }
 
+// Cuando se presione el ícono de WhatsApp
+document.getElementById('whatsappLink').addEventListener('click', function(e) {
+    e.preventDefault(); // Evita la redirección inmediata
+    document.getElementById('whatsappModal').style.display = 'block'; // Muestra el modal
+});
+
+// Para cerrar el modal
+document.querySelector('.cerrar').addEventListener('click', function() {
+    document.getElementById('whatsappModal').style.display = 'none';
+});
+
+
+// Para continuar a WhatsApp
+document.getElementById('continueWhatsapp').addEventListener('click', function() {
+    window.open('https://wa.me/3921054840', '_blank'); // Redirecciona a WhatsApp
+    document.getElementById('whatsappModal').style.display = 'none'; // Cierra el modal
+});
 
 
 // Función para guardar una nueva reserva en el LocalStorage
@@ -20,9 +37,6 @@ function guardarReserva(nombre, telefono, fecha, hora) {
     console.log(localStorage.getItem('reservas'));
 
 }
-
-
-
 
 
 // Función para obtener la última reserva del LocalStorage
@@ -95,25 +109,6 @@ function mostrarReservasServidor(reservas) {
     });
 }
 
-
-
-// Función para calcular el tiempo restante para una reserva
-function calcularTiempoRestante(fechaReserva, horaReserva) {
-    const fechaCompleta = new Date(`${fechaReserva}T${horaReserva}`);
-    const ahora = new Date();
-
-    const diferencia = fechaCompleta - ahora;
-    if (diferencia <= 0) {
-        return 'Tiempo Expirado';
-    }
-
-    const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-
-    return `${dias} días, ${horas} horas, ${minutos} minutos restantes`;
-}
-
 // Función para mostrar las reservas junto con el tiempo restante
 function mostrarReservasConTiempoRestante() {
     const reservas = obtenerReservas();
@@ -137,51 +132,13 @@ function mostrarReservasConTiempoRestante() {
     });
 }
 
-// Función para eliminar una reserva
-function eliminarReserva(id) {
-    fetch(`https://roughly-picked-humpback.ngrok-free.app/reservas/${id}`, {
-        method: 'DELETE',
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error al eliminar la reserva');
-        }
-        return response.text(); // Puede cambiarse por response.json() si el backend devuelve JSON
-    })
-    .then(data => {
-        console.log(data); // Mensaje del servidor
-        obtenerReservasServidor(); // Actualizar la lista de reservas después de eliminar una
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-}
-
-
-// Función para eliminar reservas que ya expiraron (más de 24 horas)
-function eliminarReservasExpiradas() {
-    const sql = 'DELETE FROM reservas WHERE fecha < NOW() - INTERVAL 1 DAY';
-    db.query(sql, (err, result) => {
-        if (err) {
-            console.error('Error al eliminar reservas expiradas:', err);
-            return;
-        }
-        console.log('Reservas expiradas eliminadas:', result.affectedRows);
-    });
-}
-
-// Programar eliminación automática cada 24 horas
-setInterval(() => {
-    eliminarReservasExpiradas();
-}, 86400000); // 24 horas en milisegundos
-
 
 document.getElementById('reservationForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que el formulario se envíe de la forma tradicional
 
     const nombre = document.getElementById('nombre').value.trim();
     const telefono = document.getElementById('telefono').value.trim(); // Usar trim para eliminar espacios en blanco
-    const fecha = document.getElementById('date').value; 
+    const fecha = document.getElementById('date').value;
     const hora = document.getElementById('time').value;
 
     let mensajeError = ''; // Inicializa el mensaje de error
@@ -196,7 +153,6 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     if (!hora) {
         mensajeError += 'La hora es obligatoria. ';
     }
-
 
     // Si hay mensaje de error, muéstralo y detén la ejecución
     if (mensajeError) {
@@ -227,10 +183,20 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
         mostrarReservas(); // Actualiza la lista de reservas después de crear una nueva
     })
     .catch(error => {
-        document.getElementById('message').textContent = error.message;
-        document.getElementById('message').style.color = "red";
+        console.error('Error al realizar la reserva:', error);
+        // Si el servidor no está disponible, mostrar el mensaje personalizado
+        if (error.message === 'Failed to fetch') {
+            document.getElementById('message').textContent = 
+                "El servidor no está disponible en este momento. Por favor, contacta al dueño por medio de su WhatsApp para coordinar la fecha y hora de tu reserva directamente.";
+            document.getElementById('message').style.color = "red";
+        } else {
+            document.getElementById('message').textContent = error.message;
+            document.getElementById('message').style.color = "red";
+        }
     });
 });
+
+
 
 function obtenerReservasConPolling() {
     setInterval(() => {
