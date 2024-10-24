@@ -15,21 +15,21 @@ document.getElementsByClassName("close")[0].onclick = function() {
     // Opción de pagar anticipo
     document.getElementById("payAnticipo").onclick = function() {
         const anticipo = 750;
-        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=minimundochez760@gmail.com&item_name=Anticipo%20Reserva%20Terreno&amount=${anticipo.toFixed(2)}&currency_code=MXN`;
+        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=jcreynoso71@gmail.com&item_name=Anticipo%20Reserva%20Terreno&amount=${anticipo.toFixed(2)}&currency_code=MXN`;
         window.location.href = paypalUrl;
     };
 
     // Opción de pagar el monto completo
     document.getElementById("payCompleto").onclick = function() {
         const montoCompleto = 2500;
-        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=minimundochez760@gmail.com&item_name=Reserva%20Completa%20Terreno&amount=${montoCompleto.toFixed(2)}&currency_code=MXN`;
+        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=jcreynoso71@gmail.com&item_name=Reserva%20Completa%20Terreno&amount=${montoCompleto.toFixed(2)}&currency_code=MXN`;
         window.location.href = paypalUrl;
     };
 
     // Opción de pagar el saldo restante después del anticipo
     document.getElementById("alreadyPaid").onclick = function() {
         const restante = 2500 - 750;
-        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=minimundochez760@gmail.com&item_name=Saldo%20Restante%20Reserva%20Terreno&amount=${restante.toFixed(2)}&currency_code=MXN`;
+        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=jcreynoso71@gmail.com&item_name=Saldo%20Restante%20Reserva%20Terreno&amount=${restante.toFixed(2)}&currency_code=MXN`;
         window.location.href = paypalUrl;
     };
 
