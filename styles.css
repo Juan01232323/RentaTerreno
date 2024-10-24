@@ -48,8 +48,6 @@ body {
 }
 
 
-
-
 /* Estilo del fondo del modal */
 .modal {
     display: none;
@@ -94,7 +92,6 @@ body {
 }
 
 
-
 /* Estilo del botón de cerrar */
 .close {
     color: #f00;
@@ -120,6 +117,38 @@ body {
 .close1:hover, .close:focus {
     color: #000;
 }
+
+/* Estilo del botón de cerrar */
+.cerrar {
+    color: #f00;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cerrar:hover, .close:focus {
+    color: #000;
+}
+
+/* Estilo para el botón de Continuar a WhatsApp */
+#continueWhatsapp {
+    background-color: #25D366; /* Color de WhatsApp */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px; /* Espaciado interior del botón */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor en forma de mano al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave de color */
+    display: inline-block;
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+#continueWhatsapp:hover {
+    background-color: #128C7E; /* Color más oscuro para el hover */
+}
+
 
 /* Animación de aparición */
 @keyframes zoomIn {
@@ -159,6 +188,139 @@ body {
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7);
     position: relative;
 }
+/* Sección de horas del servidor mejorada */
+.server-hours {
+    background: linear-gradient(135deg, #28a745, #5dd39e); /* Gradiente vibrante */
+    padding: 40px;
+    margin: 50px 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más profunda para mayor realismo */
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animación sutil de fondo */
+.server-hours::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+    animation: rotateBackground 15s linear infinite;
+    z-index: 0;
+}
+
+@keyframes rotateBackground {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.server-hours h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Letra espaciada con más elegancia */
+    z-index: 1;
+    position: relative;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Añade sombra al texto */
+}
+
+.server-hours p {
+    font-size: 20px;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+    font-weight: 400;
+    z-index: 1;
+    position: relative;
+}
+
+.server-hours ul {
+    list-style-type: none;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.server-hours ul li {
+    font-size: 20px;
+    color: #f9f9f9;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer; /* Interactivo */
+}
+
+.server-hours ul li:last-child {
+    border-bottom: none;
+}
+
+.server-hours ul li strong {
+    font-weight: 700;
+    color: #e0f7fa;
+    font-size: 22px;
+}
+
+.server-hours ul li i {
+    font-size: 24px;
+    color: #e0f7fa;
+    margin-right: 12px;
+    transition: transform 0.3s ease;
+}
+
+.server-hours ul li:hover {
+    background-color: rgba(255, 255, 255, 0.15); /* Resalta con mayor opacidad */
+    transform: translateY(-3px); /* Leve efecto de levitación al hacer hover */
+    border-radius: 10px;
+}
+
+.server-hours ul li:hover i {
+    transform: rotate(20deg); /* Rotación del ícono al hacer hover */
+}
+
+/* Espaciado entre elementos de la lista */
+.server-hours ul li span {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 1;
+    position: relative;
+}
+
+/* Responsivo y adaptado para dispositivos móviles */
+@media (max-width: 768px) {
+    .server-hours {
+        padding: 20px;
+        margin: 30px 0;
+    }
+
+    .server-hours h2 {
+        font-size: 26px;
+    }
+
+    .server-hours p, .server-hours ul li {
+        font-size: 16px;
+    }
+
+    .server-hours ul li i {
+        font-size: 20px;
+    }
+}
+
+
 
 /* Estilo de los ítems de la galería */
 .gallery-item {
@@ -173,13 +335,15 @@ body {
     width: 100%;
     max-width: 850px;
     height: auto;
-    max-height: 500px;
+    max-height: 650px;
     object-fit: cover;
     border-radius: 15px;
     border: 5px solid rgba(0, 255, 255, 0.4);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 255, 255, 0.4);
     transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
 }
+
+
 
 /* Efecto hover en las imágenes */
 .gallery-item:hover img {
@@ -1046,10 +1210,7 @@ body {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.eliminar-btn:hover {
-    background-color: #ff1c1c;
-    transform: scale(1.05);
-}
+
 
 footer {
     background: linear-gradient(135deg, #28a745, #218838);
