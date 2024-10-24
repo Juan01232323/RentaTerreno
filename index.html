@@ -16,7 +16,7 @@
 <body>
     <header class="main-header">
         <div class="container">
-            <h1>Terreno en Renta - Lomas Campestre Estaño #7</h1>
+            <h1>Terreno en Renta - Lomas Campestre Estaño</h1>
         </div>
     </header>
     <section class="hero">
@@ -42,6 +42,7 @@
     </section>
     
 
+    
         </div>
      
     </div>
@@ -194,6 +195,9 @@
                         <img src="img/1.jpg" alt="Foto 1">
                     </div>
                     <div class="gallery-item">
+                        <img src="img/6.jpg" alt="Foto 6">
+                    </div>
+                    <div class="gallery-item">
                         <img src="img/3.jpg" alt="Foto 3">
                     </div>
                     <div class="gallery-item">
@@ -210,9 +214,6 @@
             </div>
         </section>
 
-
-        
-  
         
         <section class="reservation">
             <div class="container">
@@ -241,31 +242,83 @@
                 <div class="container">
                     <div class="notification-box">
                         <i class="fas fa-exclamation-circle"></i>
-                        <p><strong>Nota importante:</strong> Todas las reservas registradas se eliminarán automáticamente cada <strong>24 horas</strong> para llevar un control adecuado. ¡Asegúrate de realizar tu reserva dentro de ese tiempo y de tomarle captura a tu reserva!</p>
-                    </div>
+                        <p><strong>Nota importante:</strong> Todas las reservas registradas se eliminarán automáticamente cada <strong>24 horas</strong> para llevar un control adecuado. Solo serán tomadas en cuenta aquellas reservas cuyo anticipo o pago completo haya sido realizado dentro de ese periodo. Aun si tu reserva es eliminada del sistema, será válida si has completado el pago. ¡Asegúrate de hacer el pago correspondiente y de tomarle captura a tu reserva!</p>
                 </div>
             </section>
 
         </section>
 
 
-        <a href="https://wa.me/3921054840" class="whatsapp-icon" target="_blank" aria-label="WhatsApp">
+        <a href="https://wa.me/3921054840" class="whatsapp-icon" id="whatsappLink" aria-label="WhatsApp">
             <i class="fab fa-whatsapp"></i>
-          </a>
-          
+        </a>
+        
+          <!-- Modal o alerta personalizada -->
+<div id="whatsappModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="cerrar">&times;</span>
+        <h2>Uso adecuado del número</h2>
+        <p>Por favor, da un uso adecuado y ético al número telefónico que se te proporcionará. Está disponible solo para fines de contacto con respecto al terreno de interés.</p>
+        <button id="continueWhatsapp">Continuar a WhatsApp</button>
+    </div>
+</div>
+
+
+
+
+     <!-- Nueva sección con el ícono del reloj con manecillas animadas -->
+     <section class="delivery-hours">
+        <div class="container">
+            <div class="notification-box">
+                <!-- Icono de reloj con manecillas animadas -->
+                <i class="fas fa-clock clock-icon"></i>
+                <p><strong>Horario estricto de entrega:</strong> Recuerda que el terreno debe ser entregado a las <strong>11:00 horas</strong> en punto. El incumplimiento de este horario puede conllevar cargos adicionales.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="server-hours">
+        <div class="container">
+            <h2>Horario de Encendido del Servidor</h2>
+            <ul>
+                <li><strong>Lunes:</strong> 3:00 PM - 5:30 PM</li>
+                <li><strong>Martes:</strong> 3:00 PM - 5:30 PM</li>
+                <li><strong>Miércoles:</strong> 3:00 PM - 5:30 PM</li>
+                <li><strong>Jueves:</strong> 3:00 PM - 5:30 PM</li>
+                <li><strong>Viernes:</strong> 3:00 PM - 5:30 PM</li>
+                <li><strong>Sabado:</strong> 3:00 PM - 5:30 PM</li>
+                <li><strong>Domingo:</strong> 4:00 PM - 6:30 PM</li>
+
+            </ul>
+            <p>Durante este horario, el servidor estará activo para procesar las reservas y almacenarlas en el sistema sin problemas.</p>
+            <section class="notification">
+                <div class="container">
+                    <div class="notification-box">
+                        <i class="fas fa-exclamation-circle"></i>
+            <p><strong>Nota importante:</strong> En caso de que el servidor se encuentre apagado puedes comunicarte con el dueño por medio de su WhatsApp para tomar en cuenta tu fecha y horario de reserva en nuestra agenda.</p>
+        </div>
+    </section>
+        </div>
+    </section>
 
         <section class="user-reservations">
             <div class="container">
                 <h2>Reservas</h2>
                 <ul id="userReservations" class="reservations-list"></ul>
 
+                
+
             </div>
         </div>
+
+ 
+        
    
         </section>
 
 
-    
+
     </main>
     
     <footer>
@@ -283,5 +336,6 @@
 <script src="javascript/pag.js"></script>
 
     <script src="javascript/script.js"></script>
+
 </body>
 </html>
