@@ -253,7 +253,11 @@ Este proyecto demuestra:
 ## 👨‍💻 Autor
 
 **Juan Carlos Reynoso Zúñiga**
+```bash
+
 Full Stack Developer
+```
+
 
 <img width="1919" height="826" alt="image" src="https://github.com/user-attachments/assets/2d91fdf6-f589-4be1-9923-16d97c87167e" />
 
