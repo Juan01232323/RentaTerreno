@@ -255,8 +255,6 @@ Este proyecto demuestra:
 **Juan Carlos Reynoso Zúñiga**
 Full Stack Developer
 
-Enfocado en el desarrollo de soluciones web reales con JavaScript, integración de APIs y sistemas orientados a negocio.
-
 <img width="1919" height="826" alt="image" src="https://github.com/user-attachments/assets/2d91fdf6-f589-4be1-9923-16d97c87167e" />
 
 <img width="1919" height="814" alt="image" src="https://github.com/user-attachments/assets/8b128a96-80fa-4c89-80e6-3e65a3b2391b" />
