@@ -24,7 +24,7 @@ document.querySelector('.cerrar').addEventListener('click', function() {
 
 // Para continuar a WhatsApp
 document.getElementById('continueWhatsapp').addEventListener('click', function() {
-    window.open('https://wa.me/3921054840', '_blank'); // Redirecciona a WhatsApp
+    window.open('https://wa.me/', '_blank'); // Redirecciona a WhatsApp
     document.getElementById('whatsappModal').style.display = 'none'; // Cierra el modal
 });
 
