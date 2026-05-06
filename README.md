@@ -1,159 +1,166 @@
-## 🏡 Sistema de Renta de Terreno – Full Stack JavaScript
+# Land Rental System 🏡 — Full Stack JavaScript
 
-Aplicación web completa para la gestión de **renta de terreno para eventos**, que permite a los usuarios visualizar el espacio, consultar reglas, reservar fechas disponibles, realizar pagos en línea y contactar directamente al propietario.
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)
 
-El sistema está construido con **JavaScript puro (Vanilla JS)** en el frontend y un backend con **Node.js + Express + MySQL**, integrando lógica de negocio real y automatización.
+A complete web application for the management of **event land rentals**, allowing users to view the space, check rules, book available dates, make online payments, and contact the owner directly.
+
+The system is built with **Vanilla JavaScript** on the frontend and a backend using **Node.js + Express + MySQL**, integrating real business logic and automation.
 
 ---
 
-## 🌐 Demo del Proyecto
+## 🌐 Project Demo
 
 🔗 https://rentaterreno.netlify.app
 
 ---
 
-## 🧠 Descripción General
+## 🧠 General Description
 
-El sistema fue diseñado para resolver un caso real:  
-la administración de reservas de un terreno con alta demanda, evitando conflictos de fechas, automatizando pagos y ofreciendo múltiples canales de contacto.
+The system was designed to solve a real-world case:  
+Managing bookings for a high-demand property, avoiding date conflicts, automating payments, and offering multiple contact channels.
 
-Incluye:
+Includes:
 
-- Validación de disponibilidad  
-- Persistencia de reservas  
-- Integración de pagos  
-- Comunicación directa con el cliente  
-- Automatización de limpieza de datos  
-
----
-
-## 🚀 Funcionalidades Principales
-
-### 🖼️ Experiencia de Usuario
-
-- Hero section con CTA (**Reservar ahora**)  
-- Secciones informativas:  
-  - Reglas del terreno  
-  - Características del espacio  
-- Galería interactiva tipo slider  
-- Modales dinámicos para pagos y advertencias  
+- Availability validation
+- Booking persistence
+- Payment integration
+- Direct communication with the client
+- Automated data cleanup
 
 ---
 
-### 📅 Sistema de Reservas Inteligente
+## 🚀 Core Functionalities
 
-- Formulario con validaciones:  
-  - Nombre obligatorio  
-  - Fecha y hora requeridas  
-  - Teléfono opcional  
+### 🖼️ User Experience
 
-- Validaciones avanzadas:  
-  - ❌ No permite fechas pasadas  
-  - ❌ No permite reservas duplicadas por fecha  
-
-- Visualización de reservas en tiempo real  
-- Cálculo de tiempo restante de cada reserva  
+- Hero section with CTA (**Book Now**)
+- Information sections:
+  - Land rules
+  - Space features
+- Interactive slider gallery
+- Dynamic modals for payments and warnings
 
 ---
 
-### 💾 Persistencia de Datos
+### 📅 Smart Booking System
 
-- **LocalStorage**  
-  - Manejo de reservas locales  
-  - Respaldo en caso de fallo del servidor  
+- Form with validations:
+  - Required name
+  - Required date and time
+  - Optional phone number
 
-- **Backend (API REST)**  
-  - Almacenamiento persistente en MySQL  
-  - Sincronización automática con frontend  
+- Advanced validations:
+  - ❌ Past dates are not allowed
+  - ❌ Duplicate bookings for the same date are not allowed
 
----
-
-### 🔄 Actualización en Tiempo Real
-
-- Polling cada **3 segundos**  
-- Sincronización automática con el servidor  
-- Reflejo inmediato de nuevas reservas  
+- Real-time booking visualization
+- Remaining time calculation for each booking
 
 ---
 
-### 💳 Sistema de Pagos
+### 💾 Data Persistence
 
-Integración con PayPal mediante redirección dinámica:
+- **LocalStorage**
+  - Local booking management
+  - Backup in case of server failure
 
-- 💵 Anticipo: $500 MXN  
-- 💰 Pago completo: $2500 MXN  
-- 🔁 Pago restante: $2000 MXN  
-
-Incluye:
-
-- Modal de selección de pago  
-- Validación previa (contacto recomendado vía WhatsApp)  
+- **Backend (REST API)**
+  - Persistent storage in MySQL
+  - Automatic synchronization with the frontend
 
 ---
 
-### 📲 Integración con WhatsApp
+### 🔄 Real-Time Update
 
-- Botón flotante de contacto  
-- Modal de advertencia antes de redirección  
-- Comunicación directa con el propietario  
-
----
-
-### 🔒 Protección de Contenido
-
-- Bloqueo de clic derecho  
-- Prevención de impresión (`Ctrl + P`)  
-- Detección de tecla PrintScreen  
-- Bloqueo de arrastre de imágenes  
-
-> ⚠️ Nota: Estas medidas son preventivas a nivel navegador, no garantizan seguridad absoluta.
+- Polling every **3 seconds**
+- Automatic synchronization with the server
+- Immediate reflection of new bookings
 
 ---
 
-### 🧹 Automatización del Sistema
+### 💳 Payment System
 
-- Eliminación automática de reservas expiradas (>24h)  
-- Implementado con `node-cron`  
-- Mantiene la base de datos limpia y actualizada  
+Integration with PayPal via dynamic redirection:
+
+- 💵 Deposit: $500 MXN
+- 💰 Full Payment: $2500 MXN
+- 🔁 Remaining Balance: $2000 MXN
+
+Includes:
+
+- Payment selection modal
+- Prior validation (WhatsApp contact recommended)
 
 ---
 
-## 🛠️ Stack Tecnológico
+### 📲 WhatsApp Integration
 
-| Área           | Tecnología                           |
+- Floating contact button
+- Warning modal before redirection
+- Direct communication with the owner
+
+---
+
+### 🔒 Content Protection
+
+- Right-click block
+- Print prevention (`Ctrl + P`)
+- PrintScreen key detection
+- Image drag block
+
+> ⚠️ Note: These measures are preventative at the browser level and do not guarantee absolute security.
+
+---
+
+### 🧹 System Automation
+
+- Automatic removal of expired bookings (>24h)
+- Implemented with `node-cron`
+- Keeps the database clean and up to date
+
+---
+
+## 🛠️ Tech Stack
+
+
+| Area | Technology |
 |----------------|------------------------------------|
-| Frontend       | HTML5, CSS3, JavaScript (ES6+)     |
-| Backend        | Node.js, Express                   |
-| Base de Datos  | MySQL                              |
-| Persistencia   | LocalStorage + API REST            |
-| Pagos          | PayPal                             |
-| Automatización | node-cron                          |
-| Hosting        | Netlify (frontend) + ngrok (API dev) |
+| Frontend | HTML5, CSS3, JavaScript (ES6+) |
+| Backend | Node.js, Express |
+| Database | MySQL |
+| Persistence | LocalStorage + REST API |
+| Payments | PayPal |
+| Automation | node-cron |
+| Hosting | Netlify (frontend) + ngrok (dev API) |
 
 ---
 
-## ⚙️ Arquitectura
+## ⚙️ Architecture
 
 ### 🔹 Frontend
 
-- SPA ligera con JavaScript nativo  
-- Manipulación del DOM  
-- Uso intensivo de eventos  
-- Modales personalizados  
+- Lightweight SPA with native JavaScript
+- DOM manipulation
+- Intensive use of events
+- Custom modals
 
-### 🔹 Backend (API REST)
+### 🔹 Backend (REST API)
 
-Endpoints disponibles:
+Available endpoints:
 
-- `GET /reservas` → Obtener reservas  
-- `POST /reservas` → Crear reserva  
-- `DELETE /reservas/:id` → Eliminar reserva  
+- `GET /reservas` → Get bookings
+- `POST /reservas` → Create booking
+- `DELETE /reservas/:id` → Delete booking
 
 ---
 
-## 🗄️ Base de Datos
+## 🗄️ Database
 
-Tabla: `reservas`
+Table: `reservas`
 
 ```sql
 CREATE TABLE reservas (
@@ -163,48 +170,47 @@ CREATE TABLE reservas (
   fecha DATE,
   hora TIME
 );
-````
+```
 
 ---
 
-## 🔄 Flujo de Reserva
+## 🔄 Booking Flow
 
-1. Usuario llena el formulario
-2. Validación en frontend
-3. Envío mediante `fetch()` al backend
-4. Validación en servidor:
-
-   * Fecha válida
-   * Disponibilidad
-5. Inserción en MySQL
-6. Actualización automática en UI
-
----
-
-## 💳 Flujo de Pago
-
-1. Usuario selecciona "Reservar ahora"
-2. Se muestra modal de pago
-3. Selecciona tipo de pago
-4. Redirección a PayPal con parámetros dinámicos
+1. User fills out the form
+2. Frontend validation
+3. Submission via `fetch()` to the backend
+4. Server-side validation:
+   * Valid date
+   * Availability
+5. Insertion into MySQL
+6. Automatic UI update
 
 ---
 
-## ⚠️ Consideraciones Importantes
+## 💳 Payment Flow
 
-* El servidor puede no estar disponible 24/7 (uso de ngrok)
-* Existe fallback a contacto vía WhatsApp
-* El sistema usa polling en lugar de WebSockets
-* Credenciales de base de datos deben protegerse en producción (usar `.env`)
+1. User selects "Book Now"
+2. Payment modal is displayed
+3. Select payment type
+4. Redirection to PayPal with dynamic parameters
 
 ---
 
-## 🚀 Instalación y Ejecución
+## ⚠️ Important Considerations
 
-### 1. Clonar repositorio
+* The server may not be available 24/7 (due to ngrok usage)
+* WhatsApp contact fallback exists
+* The system uses polling instead of WebSockets
+* Database credentials must be protected in production (use `.env`)
+
+---
+
+## 🚀 Installation and Execution
+
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/tu-repositorio
+git clone https://github.com
 ```
 
 ---
@@ -218,7 +224,7 @@ node app.js
 
 ---
 
-### 3. Configurar MySQL
+### 3. Configure MySQL
 
 ```sql
 CREATE DATABASE reservas;
@@ -226,29 +232,29 @@ CREATE DATABASE reservas;
 
 ---
 
-### 4. Ejecutar frontend
+### 4. Run frontend
 
-Abrir:
+Open:
 
-```
-index.html
-```
+```index.html```
 
----
-
-## 📈 Valor Técnico del Proyecto
-
-Este proyecto demuestra:
-
-* Desarrollo Full Stack real
-* Integración frontend-backend
-* Manejo de estado y persistencia
-* Validaciones de negocio
-* Consumo de APIs
-* Automatización con cron jobs
-* Experiencia de usuario (UX)
 
 ---
+
+## 📈 Technical Value of the Project
+
+This project demonstrates:
+
+* Real Full Stack development
+* Frontend-backend integration
+* State management and persistence
+* Business logic validations
+* API consumption
+* Automation with cron jobs
+* User Experience (UX) design
+
+
+
 
 ## 👨‍💻 Autor
 
