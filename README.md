@@ -1,4 +1,4 @@
-# Land Rental System 🏡 — Full Stack JavaScript
+# Land Rental System  — Full Stack JavaScript
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
@@ -14,13 +14,13 @@ The system is built with **Vanilla JavaScript** on the frontend and a backend us
 
 ---
 
-## 🌐 Project Demo
+##  Project Demo
 
 🔗 https://rentaterreno.netlify.app
 
 ---
 
-## 🧠 General Description
+##  General Description
 
 The system was designed to solve a real-world case:  
 Managing bookings for a high-demand property, avoiding date conflicts, automating payments, and offering multiple contact channels.
@@ -35,9 +35,9 @@ Includes:
 
 ---
 
-## 🚀 Core Functionalities
+##  Core Functionalities
 
-### 🖼️ User Experience
+###  User Experience
 
 - Hero section with CTA (**Book Now**)
 - Information sections:
@@ -48,7 +48,7 @@ Includes:
 
 ---
 
-### 📅 Smart Booking System
+###  Smart Booking System
 
 - Form with validations:
   - Required name
@@ -64,7 +64,7 @@ Includes:
 
 ---
 
-### 💾 Data Persistence
+###  Data Persistence
 
 - **LocalStorage**
   - Local booking management
@@ -76,7 +76,7 @@ Includes:
 
 ---
 
-### 🔄 Real-Time Update
+###  Real-Time Update
 
 - Polling every **3 seconds**
 - Automatic synchronization with the server
@@ -84,7 +84,7 @@ Includes:
 
 ---
 
-### 💳 Payment System
+###  Payment System
 
 Integration with PayPal via dynamic redirection:
 
@@ -99,7 +99,7 @@ Includes:
 
 ---
 
-### 📲 WhatsApp Integration
+###  WhatsApp Integration
 
 - Floating contact button
 - Warning modal before redirection
@@ -107,7 +107,7 @@ Includes:
 
 ---
 
-### 🔒 Content Protection
+###  Content Protection
 
 - Right-click block
 - Print prevention (`Ctrl + P`)
@@ -118,7 +118,7 @@ Includes:
 
 ---
 
-### 🧹 System Automation
+###  System Automation
 
 - Automatic removal of expired bookings (>24h)
 - Implemented with `node-cron`
@@ -126,7 +126,7 @@ Includes:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 
 | Area | Technology |
@@ -141,7 +141,7 @@ Includes:
 
 ---
 
-## ⚙️ Architecture
+##  Architecture
 
 ### 🔹 Frontend
 
@@ -160,7 +160,7 @@ Available endpoints:
 
 ---
 
-## 🗄️ Database
+##  Database
 
 Table: `reservas`
 
@@ -176,7 +176,7 @@ CREATE TABLE reservas (
 
 ---
 
-## 🔄 Booking Flow
+##  Booking Flow
 
 1. User fills out the form
 2. Frontend validation
@@ -189,7 +189,7 @@ CREATE TABLE reservas (
 
 ---
 
-## 💳 Payment Flow
+##  Payment Flow
 
 1. User selects "Book Now"
 2. Payment modal is displayed
@@ -207,7 +207,7 @@ CREATE TABLE reservas (
 
 ---
 
-## 🚀 Installation and Execution
+##  Installation and Execution
 
 ### 1. Clone the repository
 
@@ -243,7 +243,7 @@ Open:
 
 ---
 
-## 📈 Technical Value of the Project
+##  Technical Value of the Project
 
 This project demonstrates:
 
@@ -258,7 +258,7 @@ This project demonstrates:
 
 
 
-## 👨‍💻 Autor
+##  Autor
 
 **Juan Carlos Reynoso Zúñiga**
 ```bash
